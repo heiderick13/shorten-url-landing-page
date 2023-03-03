@@ -71,7 +71,6 @@ body {
 }
 
 #hero-section {
-  display: flex;
   flex-direction: column;
   overflow: hidden;
   padding: 1.5rem;
@@ -100,6 +99,25 @@ body {
   padding: 0.8rem 1rem;
   font-size: 1.3rem;
   font-weight: 700;
+}
+
+#shorten-form {
+  background-image: url(../../images/bg-shorten-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-color: var(--dark-violet);
+  margin: auto;
+  padding: 2rem;
+  width: 90%;
+  border-radius: 8px;
+}
+
+#short-this {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
 }
 
 .attribution {
