@@ -21,10 +21,10 @@
   </head>
   <body>
     <header>
-      <nav id="mobile-nav">
+      <nav id="mobile-nav" class="d-flex justify-content-between p-4">
         <img src="./images/logo.svg" alt="Shortly logo" />
         <i class="bi bi-list"></i>
-        <div class="mobile-nav-links">
+        <div class="mobile-nav-links text-center">
           <a href="#">Features</a>
           <a href="#">Pricing</a>
           <a href="#">Resources</a>
@@ -62,7 +62,12 @@
           type="text"
           placeholder="Shorten a link here..."
         />
-        <input type="submit" value="Shorten It!" id="submit-btn" />
+        <input
+          type="submit"
+          value="Shorten It!"
+          id="submit-btn"
+          class="btn round-btn"
+        />
       </form>
 
       <secction id="advanced-stats" class="text-center">
