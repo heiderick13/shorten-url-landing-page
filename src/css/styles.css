@@ -230,6 +230,8 @@ footer img {
 }
 
 .attribution {
+  margin-top: 2rem;
+  color: var(--white);
   font-size: 11px;
   text-align: center;
 }
