@@ -18,6 +18,7 @@
   /* neutral colors */
   --gray: hsl(0, 0%, 75%);
   --grayish-violet: hsl(257, 7%, 63%);
+  --light-grayish-violet: hsl(255, 26%, 91%);
   --very-dark-blue: hsl(255, 11%, 22%);
   --very-dark-violet: hsl(260, 8%, 14%);
 
@@ -31,6 +32,12 @@ body {
 
 #mobile-nav {
   position: relative;
+}
+
+#mobile-menu-btn {
+  font-size: 1.5rem;
+  color: var(--gray);
+  cursor: pointer;
 }
 
 .mobile-nav-links {
@@ -91,7 +98,7 @@ body {
 }
 
 #hero-text .main-subtitle {
-  color: var(--gray);
+  color: var(--grayish-violet);
 }
 
 #hero-section .round-btn {
@@ -101,13 +108,22 @@ body {
   font-weight: 700;
 }
 
+main {
+  position: relative;
+  background-color: var(--light-grayish-violet);
+  padding-bottom: 0.5rem;
+  margin-top: 5rem;
+}
+
 #shorten-form {
+  position: absolute;
+  top: -5%;
+  left: 5%;
   background-image: url(../../images/bg-shorten-mobile.svg);
   background-repeat: no-repeat;
   background-position: right top;
   background-color: var(--dark-violet);
-  margin: auto;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 90%;
   border-radius: 8px;
 }
@@ -118,6 +134,99 @@ body {
   border: none;
   outline: none;
   margin-bottom: 1rem;
+}
+
+#advanced-stats {
+  margin-top: 6rem;
+  padding-top: 10rem;
+}
+
+.advanced-title {
+  font-weight: 700;
+}
+
+.advanced-subtitle {
+  line-height: 2;
+  padding: 1rem 2rem 0;
+  margin-bottom: 7rem;
+  color: var(--grayish-violet);
+}
+
+.card {
+  position: relative;
+  padding-top: 2rem;
+  margin-bottom: 7rem;
+  margin-inline: auto;
+  width: 85%;
+  border: none;
+}
+
+.stat-icon {
+  position: absolute;
+  top: -25%;
+  left: 35%;
+  background-color: var(--dark-violet);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.card-title {
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: var(--grayish-violet);
+}
+
+#boost {
+  background-image: url(../../images/bg-boost-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-color: var(--dark-violet);
+  padding: 6rem 1rem;
+  color: var(--white);
+}
+
+#boost .btn {
+  margin-top: 1rem;
+  padding: 0.8rem 2.5rem;
+}
+
+footer {
+  background-color: var(--very-dark-violet);
+  text-align: center;
+}
+
+footer img {
+  filter: contrast(0);
+  filter: brightness(100);
+  padding: 2.5rem;
+}
+
+.footer-title {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-link {
+  color: var(--gray);
+  text-align: center;
+}
+
+.footer-link a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#socials {
+  display: flex;
+  justify-content: space-around;
 }
 
 .attribution {
