@@ -262,7 +262,8 @@ footer img {
 }
 
 .attribution {
-  margin-top: 2rem;
+  background-color: var(--very-dark-violet);
+  padding-top: 2rem;
   color: var(--white);
   font-size: 11px;
   text-align: center;
@@ -362,5 +363,25 @@ footer img {
 
   .boost-title {
     font-size: 2.5rem;
+  }
+
+  footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    padding: 3rem 0;
+  }
+
+  footer img {
+    align-self: flex-start;
+  }
+
+  #features {
+    margin-left: 10rem;
+  }
+
+  .footer-title,
+  .footer-link {
+    text-align: left;
   }
 }
