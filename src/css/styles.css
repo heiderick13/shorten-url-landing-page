@@ -32,6 +32,26 @@ body {
 
 #mobile-nav {
   position: relative;
+  display: flex;
+}
+
+#desktop-nav {
+  display: none;
+  align-items: center;
+  padding: 3rem 8rem 0 4rem;
+}
+
+#desktop-nav a {
+  text-decoration: none;
+  color: var(--grayish-violet);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+#desktop-nav .round-btn {
+  padding-inline: 1.5rem;
+  margin-left: 2rem;
 }
 
 #mobile-menu-btn {
@@ -237,4 +257,39 @@ footer img {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  #mobile-nav {
+    display: none;
+  }
+
+  #desktop-nav {
+    display: flex;
+  }
+
+  #hero-section {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 4rem;
+  }
+
+  #hero-text {
+    text-align: start;
+    padding: 0;
+  }
+
+  #hero-text .main-title {
+    font-size: 5rem;
+  }
+
+  #hero-text .main-subtitle {
+    font-size: 1.5rem;
+    padding-right: 10rem;
+  }
+
+  #hero-section .round-btn {
+    width: 30%;
+    margin-top: 1.5rem;
+  }
 }
