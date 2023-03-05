@@ -162,6 +162,15 @@ main {
   padding-top: 10rem;
 }
 
+#advanced-stats hr {
+  position: absolute;
+  top: 65%;
+  left: 15%;
+  border: 5px solid var(--cyan);
+  width: 70%;
+  opacity: 1;
+}
+
 .advanced-title {
   font-weight: 700;
 }
@@ -180,9 +189,11 @@ main {
   margin-inline: auto;
   width: 85%;
   border: none;
+  z-index: 1;
 }
 
 .stat-icon {
+  height: 80px;
   position: absolute;
   top: -25%;
   left: 35%;
@@ -299,7 +310,7 @@ footer img {
     background-size: cover;
     flex-direction: row;
     align-items: center;
-    top: -12%;
+    top: -10%;
     gap: 1rem;
     padding: 3.5rem 2rem;
   }
@@ -312,5 +323,34 @@ footer img {
     flex-grow: 1;
     padding: 1rem;
     margin-bottom: 0;
+  }
+
+  .advanced-title {
+    font-size: 2.5rem;
+  }
+
+  .advanced-subtitle {
+    font-size: 1.2rem;
+    padding-inline: 25rem;
+  }
+
+  .card {
+    text-align: left;
+    line-height: 2;
+    padding: 1.5rem;
+    height: 250px;
+  }
+
+  .col-md-4:nth-child(3) .card {
+    margin-top: 3rem;
+  }
+
+  .col-md-4:nth-child(4) .card {
+    margin-top: 6rem;
+  }
+
+  .stat-icon {
+    top: -20%;
+    left: 10%;
   }
 }
