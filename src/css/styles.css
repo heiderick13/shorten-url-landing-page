@@ -136,6 +136,7 @@ main {
 }
 
 #shorten-form {
+  flex-direction: column;
   position: absolute;
   top: -5%;
   left: 5%;
@@ -291,5 +292,25 @@ footer img {
   #hero-section .round-btn {
     width: 30%;
     margin-top: 1.5rem;
+  }
+
+  #shorten-form {
+    background-image: url(../../images/bg-shorten-desktop.svg);
+    background-size: cover;
+    flex-direction: row;
+    align-items: center;
+    top: -12%;
+    gap: 1rem;
+    padding: 3.5rem 2rem;
+  }
+
+  #shorten-form .btn {
+    padding: 1rem 2rem;
+  }
+
+  #short-this {
+    flex-grow: 1;
+    padding: 1rem;
+    margin-bottom: 0;
   }
 }
