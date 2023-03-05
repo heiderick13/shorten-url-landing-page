@@ -353,4 +353,14 @@ footer img {
     top: -20%;
     left: 10%;
   }
+
+  #boost {
+    background-image: url(../../images/bg-boost-desktop.svg);
+    background-size: cover;
+    padding: 5rem 1rem;
+  }
+
+  .boost-title {
+    font-size: 2.5rem;
+  }
 }
