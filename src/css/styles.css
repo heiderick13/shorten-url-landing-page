@@ -188,9 +188,7 @@ main {
   content: "Please enter a link";
   color: var(--red);
   font-size: 0.9rem;
-  position: absolute;
-  bottom: 1.5rem;
-  left: 2rem;
+  padding-top: 1rem;
 }
 
 #loading {
@@ -199,7 +197,7 @@ main {
   border: 5px solid var(--gray);
   border-top: 6px solid var(--cyan);
   border-radius: 100%;
-  margin: 0 auto 2rem;
+  margin: 1rem auto 0.5rem;
   display: none;
   animation: spin 1s infinite linear;
 }
@@ -407,6 +405,15 @@ footer img {
 
   #shorten-form .btn {
     padding: 1rem 2rem;
+  }
+
+  #shorten-form.error::after {
+    content: "Please enter a link";
+    color: var(--red);
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 2rem;
   }
 
   #short-this {
