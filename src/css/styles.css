@@ -220,7 +220,27 @@ main {
 
 #advanced-stats {
   margin-top: 6rem;
-  padding-top: 10rem;
+  padding-top: 5rem;
+}
+
+.url-element {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 1.5rem auto;
+  background-color: var(--white);
+  border-radius: 5px;
+  padding: 1rem;
+  width: 90%;
+}
+
+.grow {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.shortened {
+  color: var(--cyan);
 }
 
 #decoration-line {
@@ -235,6 +255,7 @@ main {
 
 .advanced-title {
   font-weight: 700;
+  padding-top: 3rem;
 }
 
 .advanced-subtitle {
