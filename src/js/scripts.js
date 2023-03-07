@@ -3,17 +3,32 @@ const mobileNav = document.querySelector(".mobile-nav-links");
 const shortenForm = document.querySelector("#shorten-form");
 const shortThis = document.querySelector("#short-this");
 const shortBtn = document.querySelector("#submit-btn");
+const loadingElement = document.querySelector("#loading");
 const api = "https://api.shrtco.de/v2/shorten?url=";
 
 // Functions
 async function getShorten() {
+  showLoading();
   let url = shortThis.value;
-
   let response = await fetch(api + url);
-  let data = await response.json().then((data) => {
-    console.log(data.result.full_short_link2);
-    console.log(data.result.original_link);
-  });
+
+  let data = await response
+    .json()
+    .then((data) => {
+      console.log(data.result.full_short_link2);
+      console.log(data.result.original_link);
+    })
+    .then(() => {
+      hideLoading();
+    });
+}
+
+function showLoading() {
+  loadingElement.classList.add("show");
+}
+
+function hideLoading() {
+  loadingElement.classList.remove("show");
 }
 
 // Event handlers

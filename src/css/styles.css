@@ -193,6 +193,31 @@ main {
   left: 2rem;
 }
 
+#loading {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid var(--gray);
+  border-top: 6px solid var(--cyan);
+  border-radius: 100%;
+  margin: 0 auto 2rem;
+  display: none;
+  animation: spin 1s infinite linear;
+}
+
+#loading.show {
+  display: block;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 #advanced-stats {
   margin-top: 6rem;
   padding-top: 10rem;
