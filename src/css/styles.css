@@ -422,6 +422,12 @@ footer img {
     margin-bottom: 0;
   }
 
+  #loading {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+  }
+
   #decoration-line {
     top: 65%;
     left: 15%;
