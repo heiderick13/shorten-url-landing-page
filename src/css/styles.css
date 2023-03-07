@@ -225,8 +225,8 @@ main {
 
 .url-element {
   display: flex;
-  align-items: baseline;
-  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
   margin: 1.5rem auto;
   background-color: var(--white);
   border-radius: 5px;
@@ -235,12 +235,22 @@ main {
 }
 
 .grow {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--grayish-violet);
   text-align: left;
   flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .shortened {
   color: var(--cyan);
+  text-align: left;
+}
+
+.url-element .btn {
+  width: 100%;
 }
 
 #decoration-line {
@@ -410,6 +420,22 @@ footer img {
     left: 15%;
     width: 70%;
     height: 10px;
+  }
+
+  .url-element {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: baseline;
+    width: 90%;
+  }
+
+  .grow {
+    border: none;
+    padding: 0;
+  }
+
+  .url-element .btn {
+    width: auto;
   }
 
   .advanced-title {
