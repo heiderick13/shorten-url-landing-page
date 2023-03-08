@@ -309,7 +309,7 @@ main {
   background-image: url(../../images/bg-boost-mobile.svg);
   background-repeat: no-repeat;
   background-position: right;
-  background-size: contain;
+  background-size: cover;
   background-color: var(--dark-violet);
   padding: 6rem 1rem;
   color: var(--white);
