@@ -38,6 +38,7 @@ body {
 #mobile-nav {
   position: relative;
   display: flex;
+  color: var(--white);
 }
 
 #desktop-nav {
