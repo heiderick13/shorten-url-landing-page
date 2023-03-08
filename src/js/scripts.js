@@ -49,14 +49,15 @@ function addUrlElement(originalUrl, shortenedUrl) {
     urlObj.shortenedUrl
   );
 
-  statsSection.prepend(urlEl);
+  urlsContainer.prepend(urlEl);
 
   saveToStorage(urlsArr);
+
+  loadPage();
 }
 
-function createUrlElement(id, originalUrl, shortenedUrl, copied) {
+function createUrlElement(id, originalUrl, shortenedUrl) {
   let urlEl = document.createElement("div");
-
   urlEl.classList.add("url-element");
 
   let original = document.createElement("p");
@@ -74,6 +75,13 @@ function createUrlElement(id, originalUrl, shortenedUrl, copied) {
   urlEl.appendChild(original);
   urlEl.appendChild(shortened);
   urlEl.appendChild(copyBtn);
+
+  // Event in the element
+  copyBtn.addEventListener("click", () => {
+    navigator.clipboard.writeText(shortened.textContent);
+    copyBtn.classList.add("copied");
+    copyBtn.textContent = "Copied!";
+  });
 
   return urlEl;
 }
@@ -98,7 +106,7 @@ function loadPage() {
 }
 
 function cleanUrls() {
-  urlsContainer.innerHTML = "";
+  urlsContainer.innerHTML = " ";
 }
 
 // Event handlers

@@ -254,6 +254,18 @@ main {
   width: 100%;
 }
 
+.url-element .btn:active {
+  background-color: var(--dark-violet);
+}
+
+.btn.copied {
+  background-color: var(--dark-violet);
+}
+
+.btn.copied:hover {
+  background-color: var(--dark-violet);
+}
+
 #decoration-line {
   position: absolute;
   top: 30%;
@@ -452,6 +464,10 @@ footer img {
 
   .url-element .btn {
     width: auto;
+  }
+
+  .url-element .btn:active {
+    background-color: var(--dark-violet);
   }
 
   .advanced-title {
