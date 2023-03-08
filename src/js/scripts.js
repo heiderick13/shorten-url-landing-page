@@ -5,6 +5,7 @@ const shortThis = document.querySelector("#short-this");
 const shortBtn = document.querySelector("#submit-btn");
 const statsSection = document.querySelector("#advanced-stats");
 const loadingElement = document.querySelector("#loading");
+const urlsContainer = document.querySelector("#urls-container");
 const api = "https://api.shrtco.de/v2/shorten?url=";
 
 // Functions
@@ -32,11 +33,15 @@ function generateId() {
 }
 
 function addUrlElement(originalUrl, shortenedUrl) {
+  urlsArr = getFromStorage();
+
   let urlObj = {
     id: generateId(),
     originalUrl: originalUrl,
     shortenedUrl: shortenedUrl,
   };
+
+  urlsArr.push(urlObj);
 
   let urlEl = createUrlElement(
     urlObj.id,
@@ -45,6 +50,8 @@ function addUrlElement(originalUrl, shortenedUrl) {
   );
 
   statsSection.prepend(urlEl);
+
+  saveToStorage(urlsArr);
 }
 
 function createUrlElement(id, originalUrl, shortenedUrl, copied) {
@@ -71,6 +78,29 @@ function createUrlElement(id, originalUrl, shortenedUrl, copied) {
   return urlEl;
 }
 
+function getFromStorage() {
+  return (savedUrls = JSON.parse(localStorage.getItem("urls") || "[]"));
+}
+
+function saveToStorage(urlArr) {
+  urlsJson = JSON.stringify(urlArr);
+
+  localStorage.setItem("urls", urlsJson);
+}
+
+function loadPage() {
+  cleanUrls();
+
+  getFromStorage().forEach((url) => {
+    let urlEl = createUrlElement(url.id, url.originalUrl, url.shortenedUrl);
+    urlsContainer.prepend(urlEl);
+  });
+}
+
+function cleanUrls() {
+  urlsContainer.innerHTML = "";
+}
+
 // Event handlers
 
 openMenu.addEventListener("click", () => {
@@ -93,3 +123,6 @@ shortBtn.addEventListener("click", (e) => {
     getShorten();
   }
 });
+
+// Load page
+loadPage();
