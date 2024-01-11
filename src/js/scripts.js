@@ -6,18 +6,22 @@ const shortBtn = document.querySelector("#submit-btn");
 const statsSection = document.querySelector("#advanced-stats");
 const loadingElement = document.querySelector("#loading");
 const urlsContainer = document.querySelector("#urls-container");
-const api = "https://api.shrtco.de/v2/shorten?url=";
 
 // Functions
 async function getShorten() {
   showLoading();
-  let url = shortThis.value;
-  let response = await fetch(api + url);
-
-  let data = await response.json().then((data) => {
-    hideLoading();
-    addUrlElement(data.result.original_link, data.result.full_short_link2);
-  });
+  const url = shortThis.value;
+  const apiUrl = "https://tinyurl.com/api-create.php?url=" + encodeURIComponent(url);
+  fetch(apiUrl)
+    .then(response => response.text())
+    .then(data => {
+      addUrlElement(url, data)
+      hideLoading()
+    })
+    .catch(error => {
+      alert("Something went wrong! Try again Later!")
+      hideLoading()
+    })
 }
 
 function showLoading() {
