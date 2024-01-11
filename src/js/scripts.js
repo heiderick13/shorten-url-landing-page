@@ -14,8 +14,10 @@ async function getShorten() {
   const apiUrl = "https://tinyurl.com/api-create.php?url=" + encodeURIComponent(url);
   fetch(apiUrl)
     .then(response => response.text())
-    .then(data => addUrlElement(url, data))
-    .then(hideLoading())
+    .then(data => {
+      addUrlElement(url, data)
+      hideLoading()
+    })
     .catch(error => {
       alert("Something went wrong! Try again Later!")
       hideLoading()
