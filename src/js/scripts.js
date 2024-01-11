@@ -12,7 +12,7 @@ async function getShorten() {
   showLoading();
   const url = shortThis.value;
   const apiUrl = "https://tinyurl.com/api-create.php?url=" + encodeURIComponent(url);
-  fetch(apiUrl).then(response => response.text()).then(data => { console.log(data);
+  fetch(apiUrl).then(response => response.text()).then(data => {
     console.log(data);
   })
 }
